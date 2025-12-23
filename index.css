@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Vibrant Palette */
+  --color-primary-start: #FF512F;
+  /* Vibrant Red/Orange */
+  --color-primary-end: #DD2476;
+  /* Deep Pink/Red */
+
+  --color-secondary-start: #11998e;
+  /* Teal */
+  --color-secondary-end: #38ef7d;
+  /* Lime Green */
+
+  --color-dark-bg: #1A1A2E;
+  --color-glass-bg: rgba(255, 255, 255, 0.7);
+  --color-glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply backdrop-blur-md bg-white/70 border border-white/40 shadow-xl;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-black/60 border border-white/10 shadow-xl text-white;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl;
+}
+
+/* Gradients */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-orange-500;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#FF512F] to-[#DD2476];
+}
+
+.gradient-green {
+  @apply bg-gradient-to-r from-[#11998e] to-[#38ef7d];
+}
+
+/* Animations */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

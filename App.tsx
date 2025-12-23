@@ -51,7 +51,7 @@ function App() {
 
   const handleUserUpdate = (updatedUser: UserType) => {
     setCurrentUser(updatedUser);
-    authService.saveSession(updatedUser);
+    authService.saveUser(updatedUser);
   };
 
   return (

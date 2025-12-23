@@ -156,6 +156,11 @@ function UserWebsite({ currentUser, onLogout, onUserUpdate }: UserWebsiteProps) 
     setCartCount(prev => prev + count);
   };
 
+  const handleOrderSuccess = () => {
+    setIsMarketplaceOpen(false);
+    // Optionally show success message or update state
+  };
+
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {

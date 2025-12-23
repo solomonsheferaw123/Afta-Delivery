@@ -4,7 +4,7 @@ import {
     Home, Search, ShoppingBag, Wallet, User as UserIcon,
     Bell, MapPin, ChevronRight, Star, Clock,
     Utensils, Truck, Users, LayoutGrid, Search as SearchIcon,
-    Plus, Loader2, ArrowRight, CheckCircle2
+    Plus, Loader2, ArrowRight, CheckCircle2, Settings
 } from 'lucide-react';
 import { User, Partner } from '../types';
 import { dataService } from '../services/dataService';

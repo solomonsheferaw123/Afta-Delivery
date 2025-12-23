@@ -14,7 +14,20 @@ export const dataService = {
       return await response.json();
     } catch (error) {
       console.error("Dashboard fetch error:", error);
-      return null;
+      // Return mock data for demo
+      return {
+        services: [
+          { id: 1, name: 'Food Delivery', description: 'Order from your favorite restaurants', icon: '🍕', is_active: 1 },
+          { id: 2, name: 'Grocery Shopping', description: 'Fresh groceries delivered to your door', icon: '🛒', is_active: 1 },
+          { id: 3, name: 'Package Delivery', description: 'Send packages across the city', icon: '📦', is_active: 1 },
+          { id: 4, name: 'Digital Wallet', description: 'Pay and transfer money securely', icon: '💳', is_active: 1 }
+        ],
+        partners: [
+          { id: 1, name: 'Bole Pharmacy', rating: 4.5, image_url: 'images/bole_pharmacy.jpg' },
+          { id: 2, name: 'Burger Thumb', rating: 4.8, image_url: 'images/burger_thumb.jpg' },
+          { id: 3, name: 'Daily Supermarket', rating: 4.2, image_url: 'images/daily_supermarket.jpg' }
+        ]
+      };
     }
   },
 
@@ -31,7 +44,12 @@ export const dataService = {
       return await response.json();
     } catch (error) {
       console.error("Products fetch error:", error);
-      return [];
+      // Return mock products
+      return [
+        { id: 1, name: 'Pizza Margherita', price: 250, image_url: 'images/product_placeholder.jpg', category: 'Food', partner_id: 1 },
+        { id: 2, name: 'Burger', price: 180, image_url: 'images/burger_thumb.jpg', category: 'Food', partner_id: 2 },
+        { id: 3, name: 'Milk', price: 50, image_url: 'images/daily_supermarket.jpg', category: 'Grocery', partner_id: 3 }
+      ];
     }
   },
 
